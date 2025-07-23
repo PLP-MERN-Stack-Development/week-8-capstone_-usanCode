@@ -11,7 +11,8 @@ const connectDB = require("./src/config/db");
 const { notFound, errorHandler } = require("./src/middleware/errorMiddleware");
 const userRoutes = require("./src/routes/userRoutes");
 const postRoutes = require("./src/routes/postRoutes");
-const initSocket = require("./src/socket");
+const initSocket = require("./src/socket/index.js");
+
 
 // Load env variables
 dotenv.config();
