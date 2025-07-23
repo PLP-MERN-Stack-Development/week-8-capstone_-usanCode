@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/PLP-MERN-Stack-Development/week-8-capstone_-usanCode/issues"
   },
-  "homepage": "https://github.com/PLP-MERN-Stack-Development/week-8-capstone_-usanCode#readme"
+  "homepage": "https://github.com/PLP-MERN-Stack-Development/week-8-capstone_-usanCode#readme",
+  "dependencies": {
+    "socket.io-client": "^4.8.1"
+  }
 }
