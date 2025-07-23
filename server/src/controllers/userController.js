@@ -1,8 +1,14 @@
 
 
+
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+
+// ✅ Dummy controller for testing the users route
+const getUsers = (req, res) => {
+  res.json({ message: "Users route working" });
+};
 
 const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
@@ -55,4 +61,9 @@ const loginUser = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, loginUser };
+// ✅ Export all controllers including getUsers
+module.exports = {
+  registerUser,
+  loginUser,
+  getUsers,
+};
