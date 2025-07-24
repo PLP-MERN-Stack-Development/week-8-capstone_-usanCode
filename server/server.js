@@ -40,9 +40,22 @@ app.use(morgan("dev"));
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the API. Available endpoints: /api/users, /api/posts");
+});
+
+
 // Error handlers
 app.use(notFound);
 app.use(errorHandler);
+
+app.get("/test-db", (req, res) => {
+  const mongoose = require("mongoose");
+  res.send(mongoose.connection.readyState === 1
+    ? "✅ MongoDB is connected!"
+    : "❌ MongoDB is not connected.");
+});
+
 
 // Socket.io setup
 initSocket(io);
