@@ -57,8 +57,30 @@ app.get("/test-db", (req, res) => {
 });
 
 
-// Socket.io setup
-initSocket(io);
+// ⬇️ Add your Socket.io logic here:
+io.on('connection', (socket) => {
+  console.log('A user connected');
+
+  socket.username = `User-${socket.id.slice(0, 4)}`;
+  updateOnlineUsers();
+
+  socket.on('chatMessage', (msg) => {
+    io.emit('chatMessage', msg);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('A user disconnected');
+    updateOnlineUsers();
+  });
+
+  function updateOnlineUsers() {
+    const users = [];
+    for (let [id, s] of io.of('/').sockets) {
+      users.push(s.username || `User-${id.slice(0, 4)}`);
+    }
+    io.emit('onlineUsers', users);
+  }
+});
 
 // Start server
 const PORT = process.env.PORT || 5000;
