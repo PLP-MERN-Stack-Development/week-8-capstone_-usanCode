@@ -1,10 +1,18 @@
 
 
 // client/src/components/Footer.jsx
+import { motion } from "framer-motion";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-center p-4 mt-10 shadow-inner">
-      <p className="text-sm text-gray-600">© {new Date().getFullYear()} Usanase Makala. All rights reserved.</p>
-    </footer>
+    <motion.footer
+      className="bg-blue-600 text-white text-center py-4"
+      initial={{ y: 50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <p>© {new Date().getFullYear()} Usanase Makala. All rights reserved.</p>
+    </motion.footer>
   );
 }
+
