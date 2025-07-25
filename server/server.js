@@ -13,7 +13,10 @@ const userRoutes = require("./src/routes/userRoutes");
 const postRoutes = require("./src/routes/postRoutes");
 const initSocket = require("./src/socket/index.js");
 const contactRoutes = require('./src/routes/contactRoutes');
-
+const session = require('express-session');
+const passport = require('passport');
+require('./config/passport'); // <-- load strategy
+const authRoutes = require('./routes/auth');
 
 // Load env variables
 dotenv.config();
@@ -36,11 +39,21 @@ app.use(cors());
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("dev"));
+app.use(session({
+  secret: 'secretkey',
+  resave: false,
+  saveUninitialized: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Routes
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use('/api/contact', contactRoutes);
+app.use('/auth', authRoutes);
 
 app.get("/", (req, res) => {
   res.send("Welcome to the API. Available endpoints: /api/users, /api/posts");
