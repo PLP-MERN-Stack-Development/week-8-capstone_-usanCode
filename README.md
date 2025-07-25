@@ -81,6 +81,7 @@ Further styling and polish are needed to improve the overall look and feel of th
 
 **Backend (Express + MongoDB + Socket.io)**
 
+
 <code><pre>
 
 server/
@@ -101,17 +102,15 @@ server/
 ├── server.js                  # Main Express server with Socket.io integration
 ├── package.json
 
-<pre><code>        
-
-
-
-
+ <pre><code>   
 
 
 
 **Frontend (React + Vite + Tailwind CSS + Socket.io-client)**
 
-<code><pre>
+
+
+
 
 client/
 ├── src/
@@ -128,7 +127,7 @@ client/
 ├── package.json
 └── .env                       # Environment variables (e.g. backend API URL)
 
-<code><pre>    
+    
 
 
 
