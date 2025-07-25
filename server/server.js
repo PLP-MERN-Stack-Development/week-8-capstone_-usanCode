@@ -15,8 +15,8 @@ const initSocket = require("./src/socket/index.js");
 const contactRoutes = require('./src/routes/contactRoutes');
 const session = require('express-session');
 const passport = require('passport');
-require('./config/passport'); // <-- load strategy
-const authRoutes = require('./routes/auth');
+require('./src/config/passport.js'); // <-- load strategy
+const authRoutes = require('./src/routes/auth.js');
 
 // Load env variables
 dotenv.config();
