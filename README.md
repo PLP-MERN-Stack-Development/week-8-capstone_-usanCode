@@ -102,28 +102,6 @@ server/
 ├── server.js                  # Main Express server with Socket.io integration
 ├── package.json
 
-<code><pre>
+<pre><code>
 
 
-**Frontend (React + Vite + Tailwind CSS + Socket.io-client)**
-
-<code><pre>
-
-client/
-├── src/
-│   ├── components/
-│   │   ├── ChatRoom.jsx        # Chat UI with message list, online users, and send form
-│   │   └── other components...
-│   ├── socket.js               # Socket.io client connection setup
-│   ├── App.jsx
-│   ├── main.jsx                # Entry point
-│   └── index.css               # Tailwind CSS styles
-├── public/
-├── vite.config.js              # Vite configuration
-├── tailwind.config.js          # Tailwind CSS configuration
-├── package.json
-└── .env                       # Environment variables (e.g. backend API URL)
-
-<code><pre>
-
-🌐 Special thanks to ChatGPT and Copilot!!
