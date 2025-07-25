@@ -12,6 +12,7 @@ const { notFound, errorHandler } = require("./src/middleware/errorMiddleware");
 const userRoutes = require("./src/routes/userRoutes");
 const postRoutes = require("./src/routes/postRoutes");
 const initSocket = require("./src/socket/index.js");
+const contactRoutes = require('./src/routes/contactRoutes');
 
 
 // Load env variables
@@ -39,6 +40,7 @@ app.use(morgan("dev"));
 // Routes
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
+app.use('/api/contact', contactRoutes);
 
 app.get("/", (req, res) => {
   res.send("Welcome to the API. Available endpoints: /api/users, /api/posts");
