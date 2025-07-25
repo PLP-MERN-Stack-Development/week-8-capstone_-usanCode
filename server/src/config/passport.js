@@ -14,6 +14,7 @@ passport.deserializeUser((obj, done) => {
 });
 
 // Google Strategy
+/*
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
@@ -21,8 +22,10 @@ passport.use(new GoogleStrategy({
 }, (accessToken, refreshToken, profile, done) => {
   return done(null, profile);
 }));
+*/
 
 // GitHub Strategy
+/*
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
@@ -30,8 +33,10 @@ passport.use(new GitHubStrategy({
 }, (accessToken, refreshToken, profile, done) => {
   return done(null, profile);
 }));
+*/
 
 // Facebook Strategy
+/*
 passport.use(new FacebookStrategy({
   clientID: process.env.FACEBOOK_CLIENT_ID,
   clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
@@ -40,3 +45,4 @@ passport.use(new FacebookStrategy({
   return done(null, profile);
 }));
 
+*/
