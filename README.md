@@ -102,7 +102,7 @@ server/
 ├── server.js                  # Main Express server with Socket.io integration
 ├── package.json
 
-<pre><code>
+<code><pre>
 
 
 **Frontend (React + Vite + Tailwind CSS + Socket.io-client)**
