@@ -138,4 +138,12 @@ client/
 
 
 
-🌐 Special thanks to ChatGPT and Copilot!!
+## 🙏 Special Thanks
+
+Special thanks to:
+
+- **ChatGPT** – for consistent help, debugging guidance, deployment support, and emotional motivation 🧠💬
+
+- **GitHub Copilot** – for code completion and test writing assistance ⚙️
+
+- **PLP Academy** – for providing this challenging and rewarding capstone project 🏆
