@@ -82,7 +82,7 @@ Further styling and polish are needed to improve the overall look and feel of th
 **Backend (Express + MongoDB + Socket.io)**
 
 
-
+```
 
 server/
 ├── src/
@@ -103,13 +103,17 @@ server/
 ├── package.json
 
    
+```
+
+
+
 
 
 
 **Frontend (React + Vite + Tailwind CSS + Socket.io-client)**
 
 
-
+```
 
 
 client/
@@ -128,7 +132,7 @@ client/
 └── .env                       # Environment variables (e.g. backend API URL)
 
     
-
+```
 
 
 
