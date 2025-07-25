@@ -82,7 +82,7 @@ Further styling and polish are needed to improve the overall look and feel of th
 **Backend (Express + MongoDB + Socket.io)**
 
 
-<code><pre>
+
 
 server/
 ├── src/
@@ -102,7 +102,7 @@ server/
 ├── server.js                  # Main Express server with Socket.io integration
 ├── package.json
 
- <pre><code>   
+   
 
 
 
