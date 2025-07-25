@@ -14,6 +14,8 @@ The main goal of this project is to create a dynamic personal portfolio and chat
 
 [LIVE DEMO](https://usanase-potofolio.vercel.app/)
 
+[PICH DECK](https://www.canva.com/design/DAGuLvfEzRE/gge5jYmy8SnIlD1h9Bg09w/edit?utm_content=DAGuLvfEzRE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 **Current Status:**
 
 - The backend is fully set up with Express, MongoDB, and Socket.io for real-time communication.
@@ -79,6 +81,8 @@ Further styling and polish are needed to improve the overall look and feel of th
 
 **Backend (Express + MongoDB + Socket.io)**
 
+<code><pre>
+
 
 server/
 ├── src/
@@ -98,8 +102,12 @@ server/
 ├── server.js                  # Main Express server with Socket.io integration
 ├── package.json
 
+<pre><code>
+
 
 **Frontend (React + Vite + Tailwind CSS + Socket.io-client)**
+
+<code><pre>
 
 client/
 ├── src/
@@ -116,6 +124,6 @@ client/
 ├── package.json
 └── .env                       # Environment variables (e.g. backend API URL)
 
-
+<code><pre>
 
 🌐 Special thanks to ChatGPT and Copilot!!
