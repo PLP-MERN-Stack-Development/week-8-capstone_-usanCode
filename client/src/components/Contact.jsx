@@ -13,25 +13,30 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus('Sending...');
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      const data = await res.json();
-      if (res.ok) {
-        setStatus('Message sent!');
-        setForm({ name: '', email: '', message: '' });
-      } else {
-        setStatus(data.message || 'Failed to send');
-      }
-    } catch (err) {
-      setStatus('Failed to send');
+  e.preventDefault();
+  setStatus('Sending...');
+  try {
+    const API_URL =
+      import.meta.env.PROD
+        ? 'https://week-8-capstone-usancode.onrender.com/api/contact'
+        : '/api/contact';
+
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+    const data = await res.json();
+    if (res.ok) {
+      setStatus('Message sent!');
+      setForm({ name: '', email: '', message: '' });
+    } else {
+      setStatus(data.message || 'Failed to send');
     }
-  };
+  } catch (err) {
+    setStatus('Failed to send');
+  }
+};
 
   return (
     <motion.div>
