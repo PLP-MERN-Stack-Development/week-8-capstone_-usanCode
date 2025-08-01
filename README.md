@@ -14,7 +14,7 @@ The main goal of this project is to create a dynamic personal portfolio and chat
 
 [LIVE DEMO](https://usanase-potofolio.vercel.app/)
 
-[PICH DECK](https://www.canva.com/design/DAGuLvfEzRE/gge5jYmy8SnIlD1h9Bg09w/edit?utm_content=DAGuLvfEzRE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+[PICH DECK](https://www.canva.com/design/DAGuLvfEzRE/3Zxa-JdfMAG3MMJjfbRuRQ/view?utm_content=DAGuLvfEzRE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1de72d052b)
 
 **Current Status:**
 
